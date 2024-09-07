@@ -16,6 +16,7 @@ from pathlib import Path
 
 env = environ.Env(
     DEBUG=bool,
+    SECRET_KEY=str,
 
     DATABASE_NAME=str,
     DATABASES_USER=str,
@@ -38,7 +39,7 @@ environ.Env.read_env(BASE_DIR / '.env')
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-r(jhi%h!+mb03367g+khvy3lv7wloh+i3h25fk061j+7s3(1w+'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -56,7 +57,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'rest_framework',
+
     'employees',
+    'api',
 ]
 
 MIDDLEWARE = [
