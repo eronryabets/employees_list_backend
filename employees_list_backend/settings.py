@@ -10,11 +10,29 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import environ
+import os
 from pathlib import Path
+
+env = environ.Env(
+    DEBUG=bool,
+
+    DATABASE_NAME=str,
+    DATABASES_USER=str,
+    DATABASES_PASSWORD=str,
+    DATABASE_HOST=str,
+    DATABASE_PORT=int,
+    DATABASE_NAME_LOCAL=str,
+    DATABASES_USER_LOCAL=str,
+    DATABASES_PASSWORD_LOCAL=str,
+    DATABASE_PORT_LOCAL=int,
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Take environment variables from .env file
+environ.Env.read_env(BASE_DIR / '.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -37,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'employees',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +95,14 @@ WSGI_APPLICATION = 'employees_list_backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": env('DATABASE_NAME_LOCAL' if DEBUG else 'DATABASE_NAME'),
+        "USER": env('DATABASES_USER_LOCAL' if DEBUG else 'DATABASES_USER'),
+        "PASSWORD": env('DATABASES_PASSWORD_LOCAL' if DEBUG else 'DATABASES_PASSWORD'),
+        "HOST": env('DATABASE_HOST'),
+        "PORT": env('DATABASE_PORT_LOCAL' if DEBUG else 'DATABASE_PORT'),
+    },
 }
 
 
