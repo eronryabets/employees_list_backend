@@ -1,0 +1,338 @@
+[
+    {
+        "model": "employees.employee",
+        "pk": 1,
+        "fields": {
+            "first_name": "Ihor",
+            "last_name": "Ryabets",
+            "age": 35,
+            "date_of_birth": "1989-05-30",
+            "position": "DevOps",
+            "profession": "Engineer",
+            "years_worked": 15,
+            "phone_number": "0771234567",
+            "email": "mock@mock.com",
+            "facebook_link": "https://www.mockbook.com/drunars"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 2,
+        "fields": {
+            "first_name": "John",
+            "last_name": "Doe",
+            "age": 28,
+            "date_of_birth": "1995-04-12",
+            "position": "Software Engineer",
+            "profession": "Developer",
+            "years_worked": 5,
+            "phone_number": "0772345678",
+            "email": "john.doe@mock.com",
+            "facebook_link": "https://www.mockbook.com/johndoe"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 3,
+        "fields": {
+            "first_name": "Jane",
+            "last_name": "Smith",
+            "age": 32,
+            "date_of_birth": "1991-07-08",
+            "position": "Project Manager",
+            "profession": "Manager",
+            "years_worked": 7,
+            "phone_number": "0773456789",
+            "email": "jane.smith@mock.com",
+            "facebook_link": "https://www.mockbook.com/janesmith"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 4,
+        "fields": {
+            "first_name": "Michael",
+            "last_name": "Johnson",
+            "age": 40,
+            "date_of_birth": "1983-03-22",
+            "position": "Architect",
+            "profession": "Designer",
+            "years_worked": 18,
+            "phone_number": "0774567890",
+            "email": "michael.johnson@mock.com",
+            "facebook_link": "https://www.mockbook.com/michaeljohnson"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 5,
+        "fields": {
+            "first_name": "Emily",
+            "last_name": "Davis",
+            "age": 26,
+            "date_of_birth": "1997-09-10",
+            "position": "QA Engineer",
+            "profession": "Tester",
+            "years_worked": 3,
+            "phone_number": "0775678901",
+            "email": "emily.davis@mock.com",
+            "facebook_link": "https://www.mockbook.com/emilydavis"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 6,
+        "fields": {
+            "first_name": "David",
+            "last_name": "Brown",
+            "age": 50,
+            "date_of_birth": "1973-11-15",
+            "position": "CTO",
+            "profession": "Technology Officer",
+            "years_worked": 25,
+            "phone_number": "0776789012",
+            "email": "david.brown@mock.com",
+            "facebook_link": "https://www.mockbook.com/davidbrown"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 7,
+        "fields": {
+            "first_name": "Sophia",
+            "last_name": "Miller",
+            "age": 29,
+            "date_of_birth": "1994-12-06",
+            "position": "UI/UX Designer",
+            "profession": "Designer",
+            "years_worked": 4,
+            "phone_number": "0777890123",
+            "email": "sophia.miller@mock.com",
+            "facebook_link": "https://www.mockbook.com/sophiamiller"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 8,
+        "fields": {
+            "first_name": "Daniel",
+            "last_name": "Wilson",
+            "age": 31,
+            "date_of_birth": "1992-02-18",
+            "position": "Product Owner",
+            "profession": "Owner",
+            "years_worked": 6,
+            "phone_number": "0778901234",
+            "email": "daniel.wilson@mock.com",
+            "facebook_link": "https://www.mockbook.com/danielwilson"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 9,
+        "fields": {
+            "first_name": "Olivia",
+            "last_name": "Garcia",
+            "age": 34,
+            "date_of_birth": "1989-01-14",
+            "position": "Marketing Specialist",
+            "profession": "Marketing",
+            "years_worked": 8,
+            "phone_number": "0779012345",
+            "email": "olivia.garcia@mock.com",
+            "facebook_link": "https://www.mockbook.com/oliviagarcia"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 10,
+        "fields": {
+            "first_name": "James",
+            "last_name": "Martinez",
+            "age": 38,
+            "date_of_birth": "1985-06-19",
+            "position": "Scrum Master",
+            "profession": "Facilitator",
+            "years_worked": 10,
+            "phone_number": "0770123456",
+            "email": "james.martinez@mock.com",
+            "facebook_link": "https://www.mockbook.com/jamesmartinez"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 11,
+        "fields": {
+            "first_name": "Liam",
+            "last_name": "Hernandez",
+            "age": 33,
+            "date_of_birth": "1990-04-25",
+            "position": "Data Scientist",
+            "profession": "Analyst",
+            "years_worked": 9,
+            "phone_number": "0772345689",
+            "email": "liam.hernandez@mock.com",
+            "facebook_link": "https://www.mockbook.com/liamhernandez"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 12,
+        "fields": {
+            "first_name": "Isabella",
+            "last_name": "Lopez",
+            "age": 27,
+            "date_of_birth": "1996-03-11",
+            "position": "Business Analyst",
+            "profession": "Analyst",
+            "years_worked": 5,
+            "phone_number": "0773456790",
+            "email": "isabella.lopez@mock.com",
+            "facebook_link": "https://www.mockbook.com/isabellalopez"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 13,
+        "fields": {
+            "first_name": "Henry",
+            "last_name": "Gonzalez",
+            "age": 36,
+            "date_of_birth": "1987-07-27",
+            "position": "System Administrator",
+            "profession": "Administrator",
+            "years_worked": 12,
+            "phone_number": "0774567901",
+            "email": "henry.gonzalez@mock.com",
+            "facebook_link": "https://www.mockbook.com/henrygonzalez"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 14,
+        "fields": {
+            "first_name": "Ethan",
+            "last_name": "Moore",
+            "age": 24,
+            "date_of_birth": "1999-10-09",
+            "position": "Intern",
+            "profession": "Trainee",
+            "years_worked": 1,
+            "phone_number": "0775679012",
+            "email": "ethan.moore@mock.com",
+            "facebook_link": "https://www.mockbook.com/ethanmoore"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 15,
+        "fields": {
+            "first_name": "Charlotte",
+            "last_name": "Anderson",
+            "age": 41,
+            "date_of_birth": "1982-11-05",
+            "position": "HR Manager",
+            "profession": "HR",
+            "years_worked": 17,
+            "phone_number": "0776789123",
+            "email": "charlotte.anderson@mock.com",
+            "facebook_link": "https://www.mockbook.com/charlotteanderson"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 16,
+        "fields": {
+            "first_name": "Amelia",
+            "last_name": "Thomas",
+            "age": 30,
+            "date_of_birth": "1993-01-23",
+            "position": "DevOps Engineer",
+            "profession": "Engineer",
+            "years_worked": 6,
+            "phone_number": "0777890234",
+            "email": "amelia.thomas@mock.com",
+            "facebook_link": "https://www.mockbook.com/ameliathomas"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 17,
+        "fields": {
+            "first_name": "Alexander",
+            "last_name": "Martinez",
+            "age": 39,
+            "date_of_birth": "1984-05-17",
+            "position": "Network Engineer",
+            "profession": "Engineer",
+            "years_worked": 14,
+            "phone_number": "0778902345",
+            "email": "alexander.martinez@mock.com",
+            "facebook_link": "https://www.mockbook.com/alexandermartinez"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 18,
+        "fields": {
+            "first_name": "Ava",
+            "last_name": "Perez",
+            "age": 22,
+            "date_of_birth": "2001-06-07",
+            "position": "Junior Developer",
+            "profession": "Developer",
+            "years_worked": 1,
+            "phone_number": "0779012346",
+            "email": "ava.perez@mock.com",
+            "facebook_link": "https://www.mockbook.com/avaperez"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 19,
+        "fields": {
+            "first_name": "Lucas",
+            "last_name": "White",
+            "age": 45,
+            "date_of_birth": "1978-02-10",
+            "position": "Senior Consultant",
+            "profession": "Consultant",
+            "years_worked": 20,
+            "phone_number": "0770123457",
+            "email": "lucas.white@mock.com",
+            "facebook_link": "https://www.mockbook.com/lucaswhite"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 20,
+        "fields": {
+            "first_name": "Harper",
+            "last_name": "King",
+            "age": 37,
+            "date_of_birth": "1986-03-29",
+            "position": "Product Manager",
+            "profession": "Manager",
+            "years_worked": 12,
+            "phone_number": "0771234568",
+            "email": "harper.king@mock.com",
+            "facebook_link": "https://www.mockbook.com/harperking"
+        }
+    },
+    {
+        "model": "employees.employee",
+        "pk": 21,
+        "fields": {
+            "first_name": "Ella",
+            "last_name": "Scott",
+            "age": 34,
+            "date_of_birth": "1989-12-20",
+            "position": "HR Specialist",
+            "profession": "HR",
+            "years_worked": 8,
+            "phone_number": "0772345679",
+            "email": "ella.scott@mock.com",
+            "facebook_link": "https://www.mockbook.com/ellascott"
+        }
+    }
+]
