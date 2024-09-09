@@ -1,9 +1,14 @@
-from django.urls import path
+from django.urls import path, include
 
-from api.views import EmployeeListApiView
+from rest_framework import routers
+
+from api.views import EmployeeModelViewSet
 
 app_name = 'api'
 
+router = routers.DefaultRouter()
+router.register(r'employee', EmployeeModelViewSet)
+
 urlpatterns = [
-    path('employee-list/', EmployeeListApiView.as_view(), name='employee_list'),
+    path('', include(router.urls)),
 ]
