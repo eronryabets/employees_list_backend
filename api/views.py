@@ -1,12 +1,18 @@
 from rest_framework.viewsets import ModelViewSet
-from django.db.models import Q  # Для сложных запросов
+from rest_framework.pagination import PageNumberPagination
+from django.db.models import Q
 from employees.models import Employee
 from employees.serializers import EmployeeSerializer
 
 
+class EmployeePagination(PageNumberPagination):
+    page_size = 10
+
+
 class EmployeeModelViewSet(ModelViewSet):
-    queryset = Employee.objects.all()  # Это базовый queryset, его можно оставить
+    queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
+    pagination_class = EmployeePagination
 
     def get_queryset(self):
         queryset = Employee.objects.all().order_by('id')
