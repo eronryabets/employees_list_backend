@@ -12,7 +12,7 @@ class Employee(models.Model):
     phone_number = models.CharField(max_length=20)
     email = models.EmailField(unique=True)
     facebook_link = models.URLField(blank=True, null=True)
-    avatar_link = models.URLField(blank=True, null=True)
+    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
     rating = models.IntegerField(default=0)
 
     def __str__(self):

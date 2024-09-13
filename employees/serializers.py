@@ -18,6 +18,6 @@ class EmployeeSerializer(serializers.ModelSerializer):
             'phone_number',
             'email',
             'facebook_link',
-            'avatar_link',
+            'avatar',
             'rating',
         )

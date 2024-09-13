@@ -46,6 +46,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -57,11 +60,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'corsheaders',
+    'debug_toolbar',
 
     'employees',
     'api',
 
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +78,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'corsheaders.middleware.CorsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True  # Разрешить все источники
@@ -120,7 +125,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -159,3 +163,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+    'localhost',
+]
