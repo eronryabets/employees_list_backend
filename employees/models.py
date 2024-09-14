@@ -1,3 +1,5 @@
+import os
+
 from django.db import models
 
 
@@ -17,3 +19,18 @@ class Employee(models.Model):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name} {self.date_of_birth}'
+
+        # Переопределяем метод save для удаления старого файла аватарки
+
+    def save(self, *args, **kwargs):
+        try:
+            old_avatar = Employee.objects.get(pk=self.pk).avatar
+        except Employee.DoesNotExist:
+            old_avatar = None
+
+        super().save(*args, **kwargs)
+
+        # Если аватарка изменилась, удаляем старую
+        if old_avatar and old_avatar != self.avatar:
+            if os.path.isfile(old_avatar.path):
+                os.remove(old_avatar.path)

@@ -13,8 +13,8 @@
             "phone_number": "0771234567",
             "email": "mock@mock.com",
             "facebook_link": "https://www.mockbook.com/drunars",
-            "avatar_link": "https://avatars.githubusercontent.com/u/23005495?v=4",
-            "rating": 88
+            "avatar": "avatars/IhorRyabets.png",
+            "rating": 92
         }
     },
     {
@@ -31,7 +31,7 @@
             "phone_number": "0772345678",
             "email": "john.doe@mock.com",
             "facebook_link": "https://www.mockbook.com/johndoe",
-            "avatar_link": "https://images.generated.photos/A_mZgXFKp83z70B5m0eEV-7jDvXHNwiq-JFUfVZumJQ/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDk3OTA4LmpwZw.jpg",
+            "avatar": "avatars/JohnDoe.jpg",
             "rating": 52
         }
     },
@@ -49,7 +49,7 @@
             "phone_number": "0773456789",
             "email": "jane.smith@mock.com",
             "facebook_link": "https://www.mockbook.com/janesmith",
-            "avatar_link": "https://images.generated.photos/NBcsqRViLwQujuMWRiJZsbdmlRzgtJWHDeP2GQahg3c/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/ODk1NDY3LmpwZw.jpg",
+            "avatar": "avatars/JaneSmith.jpg",
             "rating": 64
         }
     },
@@ -67,7 +67,7 @@
             "phone_number": "0774567890",
             "email": "michael.johnson@mock.com",
             "facebook_link": "https://www.mockbook.com/michaeljohnson",
-            "avatar_link": "https://images.generated.photos/YdFCfgjt7Dyr1Y6OdljBxONSh1Y5-Ing_SipAGSlnQc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MjA1MTU5LmpwZw.jpg",
+            "avatar": "avatars/MichaelJohnson.jpg",
             "rating": 86
         }
     },
@@ -85,7 +85,7 @@
             "phone_number": "0775678901",
             "email": "emily.davis@mock.com",
             "facebook_link": "https://www.mockbook.com/emilydavis",
-            "avatar_link": "https://images.generated.photos/1y_TsBUFe-58zs4ILJ9vaoTeqjd23Me1Y4khGrm9Yko/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MTY4OTM1LmpwZw.jpg",
+            "avatar": "avatars/EmilyDavis.jpg",
             "rating": 25
         }
     },
@@ -103,7 +103,7 @@
             "phone_number": "0776789012",
             "email": "david.brown@mock.com",
             "facebook_link": "https://www.mockbook.com/davidbrown",
-            "avatar_link": "https://images.generated.photos/VYwf3ASzt7Ng9JeTgc1Yq5U9dwaP0hJ3EBFGF4jGTZo/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTQwNDYzLmpwZw.jpg",
+            "avatar": "avatars/DavidBrown.jpg",
             "rating": 85
         }
     },
@@ -121,7 +121,7 @@
             "phone_number": "0777890123",
             "email": "sophia.miller@mock.com",
             "facebook_link": "https://www.mockbook.com/sophiamiller",
-            "avatar_link": "https://images.generated.photos/5lwh7iKyt7VjW7tTW02hCJW1UbXFYbeElntPQBttnxc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDA4MjI4LmpwZw.jpg",
+            "avatar": "avatars/SophiaMiller.jpg",
             "rating": 87
         }
     },
@@ -139,7 +139,7 @@
             "phone_number": "0778901234",
             "email": "daniel.wilson@mock.com",
             "facebook_link": "https://www.mockbook.com/danielwilson",
-            "avatar_link": "https://images.generated.photos/tBc0lLQ_oGxkzUtUaN6kDhkNsupKp3IDaSSePjb8v6I/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDE2NzU3LmpwZw.jpg",
+            "avatar": "avatars/DanielWilson.jpg",
             "rating": 45
         }
     },
@@ -157,7 +157,7 @@
             "phone_number": "0779012345",
             "email": "olivia.garcia@mock.com",
             "facebook_link": "https://www.mockbook.com/oliviagarcia",
-            "avatar_link": "https://images.generated.photos/1XyRfMs03-RWzDnAwyM0AZ3twEC-1s1QQjuo6a1Uryw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDI1Mjk3LmpwZw.jpg",
+            "avatar": "avatars/OliviaGarcia.jpg",
             "rating": 85
         }
     },
@@ -175,7 +175,7 @@
             "phone_number": "0770123456",
             "email": "james.martinez@mock.com",
             "facebook_link": "https://www.mockbook.com/jamesmartinez",
-            "avatar_link": "https://images.generated.photos/Cc6yWFZxL2q8XkDo7pFzg5NwvdfOS2-Wi-fqHhf92BQ/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NjU3MzE2LmpwZw.jpg",
+            "avatar": "avatars/JamesMartinez.jpg",
             "rating": 56
         }
     },
@@ -193,7 +193,7 @@
             "phone_number": "0772345689",
             "email": "liam.hernandez@mock.com",
             "facebook_link": "https://www.mockbook.com/liamhernandez",
-            "avatar_link": "https://images.generated.photos/UsjigekRusUdOTiMqZipatTAcdFEbkj2M_IURKWtYVY/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTg1Mjg5LmpwZw.jpg",
+            "avatar": "avatars/LiamHernandez.jpg",
             "rating": 50
         }
     },
@@ -211,7 +211,7 @@
             "phone_number": "0773456790",
             "email": "isabella.lopez@mock.com",
             "facebook_link": "https://www.mockbook.com/isabellalopez",
-            "avatar_link": "https://images.generated.photos/jnKglcMTMoz97DXd97QWKbCGp5L-STehCmVuig3cHcE/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTgzMDA5LmpwZw.jpg",
+            "avatar": "avatars/IsabellaLopez.jpg",
             "rating": 45
         }
     },
@@ -229,7 +229,7 @@
             "phone_number": "0774567901",
             "email": "henry.gonzalez@mock.com",
             "facebook_link": "https://www.mockbook.com/henrygonzalez",
-            "avatar_link": "https://images.generated.photos/Al6vQ5NTiQ57aSIDTOKo92Ndp4at2t-WOUkCm6R7Ilc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MzIxNjkxLmpwZw.jpg",
+            "avatar": "avatars/HenryGonzalez.jpg",
             "rating": 85
         }
     },
@@ -247,7 +247,7 @@
             "phone_number": "0775679012",
             "email": "ethan.moore@mock.com",
             "facebook_link": "https://www.mockbook.com/ethanmoore",
-            "avatar_link": "https://images.generated.photos/mxUhZg8V0sodt6cGosRcQGp9CdgJH96OzkFaZnHn4U4/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTUxMDg4LmpwZw.jpg",
+            "avatar": "avatars/EthanMoore.jpg",
             "rating": 45
         }
     },
@@ -265,7 +265,7 @@
             "phone_number": "0776789123",
             "email": "charlotte.anderson@mock.com",
             "facebook_link": "https://www.mockbook.com/charlotteanderson",
-            "avatar_link": "https://images.generated.photos/ogaYO2bDtnYwcD4H33mRJ4ywC4o6CnTvwSgYAn9vmGc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDU3NzM2LmpwZw.jpg",
+            "avatar": "avatars/CharlotteAnderson.jpg",
             "rating": 45
         }
     },
@@ -283,7 +283,7 @@
             "phone_number": "0777890234",
             "email": "amelia.thomas@mock.com",
             "facebook_link": "https://www.mockbook.com/ameliathomas",
-            "avatar_link": "https://images.generated.photos/xmtIs4D8qktY4AmJwEg1e8ZCa6T-njfDp5v3vWzx83s/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MTc1OTMzLmpwZw.jpg",
+            "avatar": "avatars/AmeliaThomas.jpg",
             "rating": 85
         }
     },
@@ -301,7 +301,7 @@
             "phone_number": "0778902345",
             "email": "alexander.martinez@mock.com",
             "facebook_link": "https://www.mockbook.com/alexandermartinez",
-            "avatar_link": "https://images.generated.photos/MLfoPliptvAPbGBchM0WD8plmjoxU39IK4sVW4obiyU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/ODEyOTI1LmpwZw.jpg",
+            "avatar": "avatars/AlexanderMartinez.jpg",
             "rating": 22
         }
     },
@@ -319,7 +319,7 @@
             "phone_number": "0779012346",
             "email": "ava.perez@mock.com",
             "facebook_link": "https://www.mockbook.com/avaperez",
-            "avatar_link": "https://images.generated.photos/IzEFOGp1-qLBf7Ou_RYhmVillWxWAo5Nag-YsWyBjFM/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/Njg1NTU2LmpwZw.jpg",
+            "avatar": "avatars/AvaPerez.jpg",
             "rating": 45
         }
     },
@@ -337,7 +337,7 @@
             "phone_number": "0770123457",
             "email": "lucas.white@mock.com",
             "facebook_link": "https://www.mockbook.com/lucaswhite",
-            "avatar_link": "https://images.generated.photos/hduC_c_9RYIUAnQvFf6wh91HGwQ9ch3IceyinaIQcnY/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MTc0NzA1LmpwZw.jpg",
+            "avatar": "avatars/LucasWhite.jpg",
             "rating": 67
         }
     },
@@ -355,7 +355,7 @@
             "phone_number": "0771234568",
             "email": "harper.king@mock.com",
             "facebook_link": "https://www.mockbook.com/harperking",
-            "avatar_link": "https://images.generated.photos/vvntjmmbdisG9TYwRKm090TkqJLbmOr6dIY6-NWlVcg/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTQ2MTUyLmpwZw.jpg",
+            "avatar": "avatars/HarperKing.jpg",
             "rating": 48
         }
     },
@@ -373,7 +373,7 @@
             "phone_number": "0772345679",
             "email": "ella.scott@mock.com",
             "facebook_link": "https://www.mockbook.com/ellascott",
-            "avatar_link": "https://images.generated.photos/EaK_N7mp83PlmZ6DVuyIl4YJ5CENKqBP4H43vdSdciw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDE3MTI5LmpwZw.jpg",
+            "avatar": "avatars/EllaScott.jpg",
             "rating": 45
         }
     }
