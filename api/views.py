@@ -3,16 +3,20 @@ from rest_framework.pagination import PageNumberPagination
 from django.db.models import Q
 from employees.models import Employee
 from employees.serializers import EmployeeSerializer
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 
 class EmployeePagination(PageNumberPagination):
     page_size = 10
 
 
+# admin only access [!]
 class EmployeeModelViewSet(ModelViewSet):
-    # queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
     pagination_class = EmployeePagination
+    permission_classes = [IsAuthenticated]
+    # admin only access [!]
+    # permission_classes = [IsAuthenticated, IsAdminUser]
 
     def get_queryset(self):
         queryset = Employee.objects.all()

@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import environ
 import os
 from pathlib import Path
+from datetime import timedelta
 
 env = environ.Env(
     DEBUG=bool,
@@ -62,9 +63,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'debug_toolbar',
+    'rest_framework_simplejwt',
 
     'employees',
     'api',
+    'accounts',
 
 ]
 
@@ -122,7 +125,17 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': [
         'django_filters.rest_framework.DjangoFilterBackend',
         'rest_framework.filters.SearchFilter',
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
 # Password validation
