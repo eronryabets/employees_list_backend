@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import generics, permissions
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import RegisterSerializer, UserSerializer
 
@@ -17,13 +19,18 @@ class RegisterView(generics.CreateAPIView):
         user.groups.add(user_group)
 
 
-# Получение данных текущего пользователя
-class UserDetailView(generics.RetrieveAPIView):
-    serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]
+# Получение UPDATE данных текущего пользователя
+class UserProfileView(APIView):
+    permission_classes = [IsAuthenticated]
 
-    def get_object(self):
-        return self.request.user
+    def get(self, request):
+        user = request.user
+        # Отправляем данные о пользователе, включая его роль
+        return Response({
+            'username': user.username,
+            'email': user.email,
+            'role': 'admin' if user.is_staff else 'user',
+        })
 
 
 # Выход из системы
