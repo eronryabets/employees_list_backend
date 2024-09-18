@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -46,3 +46,17 @@ class LogoutView(generics.GenericAPIView):
             return Response({"message": "Successfully logged out"}, status=200)
         except Exception as e:
             return Response({"error": str(e)}, status=400)
+
+
+
+# class LogoutView(APIView):
+#     def post(self, request):
+#         try:
+#             refresh_token = request.data["refresh_token"]
+#             token = RefreshToken(refresh_token)
+#             token.blacklist()  # Добавляем refresh_token в чёрный список
+#             return Response(status=status.HTTP_205_RESET_CONTENT)
+#         except KeyError:
+#             return Response({"error": "'refresh_token' not provided"}, status=status.HTTP_400_BAD_REQUEST)
+#         except Exception as e:
+#             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
