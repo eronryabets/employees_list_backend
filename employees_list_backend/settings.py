@@ -86,7 +86,15 @@ MIDDLEWARE = [
     'employees_list_backend.middleware.JWTAuthenticationFromCookiesMiddleware',
 ]
 
+# CORS settings
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True  # Разрешить все источники
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_HTTPONLY = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Ваш React-клиент
+]
 
 ROOT_URLCONF = 'employees_list_backend.urls'
 
