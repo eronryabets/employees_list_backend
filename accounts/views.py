@@ -4,7 +4,10 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-from .serializers import RegisterSerializer, UserSerializer
+from .serializers import RegisterSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+from django.http import JsonResponse
+import datetime
 
 
 # Регистрация
@@ -33,30 +36,50 @@ class UserProfileView(APIView):
         })
 
 
-# Выход из системы
-class LogoutView(generics.GenericAPIView):
-    permission_classes = [permissions.IsAuthenticated]
-
+class LogoutView(APIView):
     def post(self, request):
-        try:
-            refresh_token = request.data["refresh_token"]
-            token = RefreshToken(refresh_token)
-            token.blacklist()
+        response = Response({"message": "Logout successful"},
+                            status=status.HTTP_205_RESET_CONTENT)
 
-            return Response({"message": "Successfully logged out"}, status=200)
-        except Exception as e:
-            return Response({"error": str(e)}, status=400)
+        # Удаление токенов из cookies
+        response.delete_cookie('access_token')
+        response.delete_cookie('refresh_token')
+
+        return response
 
 
+class CustomTokenObtainPairView(TokenObtainPairView):
+    def post(self, request, *args, **kwargs):
+        response = super().post(request, *args, **kwargs)
+        data = response.data
 
-# class LogoutView(APIView):
-#     def post(self, request):
-#         try:
-#             refresh_token = request.data["refresh_token"]
-#             token = RefreshToken(refresh_token)
-#             token.blacklist()  # Добавляем refresh_token в чёрный список
-#             return Response(status=status.HTTP_205_RESET_CONTENT)
-#         except KeyError:
-#             return Response({"error": "'refresh_token' not provided"}, status=status.HTTP_400_BAD_REQUEST)
-#         except Exception as e:
-#             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        # Получаем access и refresh токены
+        access_token = data.get('access')
+        refresh_token = data.get('refresh')
+
+        # Создаем ответ с пустым телом (мы отправляем токены через cookies)
+        response = JsonResponse({"message": "Login successful"})
+
+        # Устанавливаем токены в httpOnly cookies
+        access_expiry = datetime.datetime.utcnow() + datetime.timedelta(minutes=60)
+        refresh_expiry = datetime.datetime.utcnow() + datetime.timedelta(days=1)
+
+        response.set_cookie(
+            key='access_token',
+            value=access_token,
+            httponly=True,
+            secure=True,  # Установи True для HTTPS
+            samesite='Lax',
+            expires=access_expiry
+        )
+
+        response.set_cookie(
+            key='refresh_token',
+            value=refresh_token,
+            httponly=True,
+            secure=True,  # Установи True для HTTPS
+            samesite='Lax',
+            expires=refresh_expiry
+        )
+
+        return response

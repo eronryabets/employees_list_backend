@@ -83,6 +83,7 @@ MIDDLEWARE = [
 
     'corsheaders.middleware.CorsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'employees_list_backend.middleware.JWTAuthenticationFromCookiesMiddleware',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True  # Разрешить все источники
