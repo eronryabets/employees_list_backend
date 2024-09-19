@@ -63,7 +63,7 @@ class CustomTokenObtainPairView(TokenObtainPairView):
         response = JsonResponse({"message": "Login successful"})
 
         # Устанавливаем токены в httpOnly cookies
-        access_expiry = datetime.datetime.utcnow() + datetime.timedelta(minutes=1)
+        access_expiry = datetime.datetime.utcnow() + datetime.timedelta(minutes=60)
         refresh_expiry = datetime.datetime.utcnow() + datetime.timedelta(days=10)
 
         response.set_cookie(
@@ -108,7 +108,7 @@ class CookieTokenRefreshView(APIView):
         response = Response({"access_token": str(access_token)},
                             status=status.HTTP_200_OK)
 
-        access_expiry = datetime.datetime.utcnow() + datetime.timedelta(minutes=1)
+        access_expiry = datetime.datetime.utcnow() + datetime.timedelta(minutes=60)
 
         response.set_cookie(
             key='access_token',
