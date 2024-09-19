@@ -15,6 +15,7 @@ import os
 from pathlib import Path
 from datetime import timedelta
 
+
 env = environ.Env(
     DEBUG=bool,
     SECRET_KEY=str,
@@ -29,6 +30,7 @@ env = environ.Env(
     DATABASES_PASSWORD_LOCAL=str,
     DATABASE_PORT_LOCAL=int,
 )
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,15 +88,6 @@ MIDDLEWARE = [
     'employees_list_backend.middleware.JWTAuthenticationFromCookiesMiddleware',
 ]
 
-# CORS settings
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_ALL_ORIGINS = True  # Разрешить все источники
-CSRF_COOKIE_HTTPONLY = True
-SESSION_COOKIE_HTTPONLY = True
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Ваш React-клиент
-]
 
 ROOT_URLCONF = 'employees_list_backend.urls'
 
@@ -191,4 +184,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 INTERNAL_IPS = [
     '127.0.0.1',
     'localhost',
+]
+
+# CORS settings
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True  # Разрешить все источники
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_HTTPONLY = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # URL фронтенда
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",  # URL фронтенда
 ]

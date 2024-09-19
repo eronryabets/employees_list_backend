@@ -8,6 +8,8 @@ from .serializers import RegisterSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django.http import JsonResponse
 import datetime
+from rest_framework_simplejwt.exceptions import InvalidToken
+from rest_framework import status
 
 
 # Регистрация
@@ -61,25 +63,60 @@ class CustomTokenObtainPairView(TokenObtainPairView):
         response = JsonResponse({"message": "Login successful"})
 
         # Устанавливаем токены в httpOnly cookies
-        access_expiry = datetime.datetime.utcnow() + datetime.timedelta(minutes=60)
-        refresh_expiry = datetime.datetime.utcnow() + datetime.timedelta(days=1)
+        access_expiry = datetime.datetime.utcnow() + datetime.timedelta(minutes=1)
+        refresh_expiry = datetime.datetime.utcnow() + datetime.timedelta(days=10)
 
         response.set_cookie(
             key='access_token',
             value=access_token,
-            httponly=True,
-            secure=True,  # Установи True для HTTPS
-            samesite='Lax',
+            httponly=True,  # фронтенд будет пытаться получить токен через JS, что не рекомендуется
+            secure=False,  # Установи True для HTTPS # Установите False для разработки
+            samesite='Lax',  # Ограничивает отправку токенов в разных контекстах
             expires=access_expiry
         )
 
         response.set_cookie(
             key='refresh_token',
             value=refresh_token,
-            httponly=True,
-            secure=True,  # Установи True для HTTPS
-            samesite='Lax',
+            httponly=True,  # фронтенд будет пытаться получить токен через JS, что не рекомендуется
+            secure=False,  # Установи True для HTTPS # Установите False для разработки
+            samesite='Lax',  # Ограничивает отправку токенов в разных контекстах
             expires=refresh_expiry
+        )
+
+        return response
+
+
+class CookieTokenRefreshView(APIView):
+    def post(self, request):
+        # Извлекаем refresh_token из cookies
+        refresh_token = request.COOKIES.get('refresh_token')
+
+        if refresh_token is None:
+            return Response({"detail": "Refresh token missing in cookies"},
+                            status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            # Попытка создать новый access-токен из refresh-токена
+            refresh = RefreshToken(refresh_token)
+            access_token = refresh.access_token
+        except InvalidToken:
+            return Response({"detail": "Invalid refresh token"},
+                            status=status.HTTP_400_BAD_REQUEST)
+
+        # Создаем ответ и отправляем новый access-токен в cookies
+        response = Response({"access_token": str(access_token)},
+                            status=status.HTTP_200_OK)
+
+        access_expiry = datetime.datetime.utcnow() + datetime.timedelta(minutes=1)
+
+        response.set_cookie(
+            key='access_token',
+            value=str(access_token),
+            httponly=True,
+            secure=False,  # Поставь True для HTTPS
+            samesite='Lax',
+            expires=access_expiry
         )
 
         return response
