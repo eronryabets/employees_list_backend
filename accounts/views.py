@@ -40,13 +40,17 @@ class UserProfileView(APIView):
 
 class LogoutView(APIView):
     def post(self, request):
+        try:
+            refresh_token = request.COOKIES.get('refresh_token')
+            token = RefreshToken(refresh_token)
+            token.blacklist()  # Аннулируем токен
+        except Exception as e:
+            pass  # В случае ошибки продолжаем
+
         response = Response({"message": "Logout successful"},
                             status=status.HTTP_205_RESET_CONTENT)
-
-        # Удаление токенов из cookies
         response.delete_cookie('access_token')
         response.delete_cookie('refresh_token')
-
         return response
 
 
